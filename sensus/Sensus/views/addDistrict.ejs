@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Add Subdistrict</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <form action="/districts/add" method="POST">
+    <div>
+        <label for="name"><h2>Name of Subdistrict</h2></label>
+        <input type="text" name="name" id="name" placeholder="e.g:Bojong Kelut">
+    </div>
+    
+    <div>
+        <label for="chief"><h2>Name of Chief</h2></label>
+        <input type="text" name="chief" id="chief" placeholder="e.g:Din Syams">
+    </div><br>
+    <div>
+        <input type="submit" value="Save">
+        <input type="reset" value="Cancel">
+    </div>
+    </form>
+    <%- include('partials/footer') %>
+</body>
+</html>

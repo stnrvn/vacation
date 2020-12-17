@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Subdistrict</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <h1>List Subdistricts</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name Of Subdistricts</th>
+                <th>Chief of Subdistrict</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach((el)=>{ %>
+                <tr>
+                    <th><%= el.name %></th>
+                    <th><%= el.chief %></th>
+                    <th><a href ="/districts/edit/<%= el.id %>">Edit</a> | 
+                        <a href ="/districts/delete/<%= el.id %>" onclick="return confirm('Anda Yakin Hapus ?')">Delete</a>  | 
+                        <a href ="/districts/addCitizen/<%= el.id %>">Add Citizen</a>
+                    </th>
+                </tr>
+                <% }) %>  
+            </tbody>
+        </table><br>
+        <button><a href="/districts/add" style="text-decoration: none;"> Add Subdistrict</a></button>
+        <%- include('partials/footer') %>
+    </body>
+    </html>

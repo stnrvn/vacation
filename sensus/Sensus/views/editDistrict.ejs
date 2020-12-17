@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Add Movie</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <form action="/districts/edit/<%= data.id %>" method="POST">
+    <div>
+        <label for="name"><h2>Name Of Subdictrict</h2></label>
+        <input type="text" name="name" id="name" value="<%= data.name %>">
+    </div>
+    
+    <div>
+        <label for="chief"><h2>Chief of Subdistrict</h2></label>
+        <input type="text" name="chief" id="chief" value="<%= data.chief %>">
+    </div><br>
+    <div>
+        <input type="submit" value="Update">
+        <input type="reset" value="Cancel">
+    </div>
+    </form>
+    <%- include('partials/footer') %>
+</body>
+</html>
